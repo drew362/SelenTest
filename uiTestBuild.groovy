@@ -8,15 +8,15 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                sh 'mvn clean test'
-            }
-        }
+//        stage('Build') {
+//            steps {
+//                sh 'mvn clean test'
+//            }
+//        }
 
         stage('Run UI Tests') {
             steps {
-                sh 'mvn test'
+                sh 'clean test'
             }
         }
     }
