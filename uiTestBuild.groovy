@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run UI Tests') {
             steps {
-                sh 'clean test'
+                sh 'mvn test'
             }
         }
     }
