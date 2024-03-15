@@ -21,5 +21,17 @@ pipeline {
                 sh 'mvn test'
             }
         }
+        stage('Генерация отчета Allure') {
+            steps {
+                script {
+                    sh 'mvn allure:report'
+                }
+                post {
+                    always {
+                        allure([includeProperties: false, jdk: '', results: [[path: 'target/surefire-reports']], reportBuildPolicy: 'ALWAYS', report: true])
+                    }
+                }
+            }
+        }
     }
 }
