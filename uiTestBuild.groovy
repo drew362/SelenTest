@@ -28,7 +28,7 @@ pipeline {
                 }
                 post {
                     always {
-                        allure([includeProperties: false, jdk: '', results: [[path: 'target/surefire-reports']], reportBuildPolicy: 'ALWAYS', report: true])
+                        allure([includeProperties: false, jdk: '', results: [[path: 'target/surefire-reports']], reportBuildPolicy: 'ALWAYS', report: 'true'])
                     }
                 }
             }
