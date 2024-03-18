@@ -12,13 +12,6 @@ pipeline {
                 git 'https://github.com/drew362/SelenTest.git'
             }
         }
-
-//        stage('Build') {
-//            steps {
-//                sh 'mvn clean test'
-//            }
-//        }
-
         stage('Run UI Tests') {
             steps {
                 sh 'mvn test'
@@ -29,13 +22,13 @@ pipeline {
                 script {
                     script {
                         echo "Путь к отчету Allure: ${params.results}"
-                    allure([
-                            includeProperties: false,
-                            jdk: '',
-                            properties: [],
-                            reportBuildPolicy: 'ALWAYS',
-                            results: [[path: '${params.results}']]
-                    ])
+                        allure([
+                                includeProperties: true,
+                                jdk              : '',
+                                properties       : [],
+                                reportBuildPolicy: 'ALWAYS',
+                                results          : [[path: '${params.results}']]
+                        ])
                     }
                 }
             }
