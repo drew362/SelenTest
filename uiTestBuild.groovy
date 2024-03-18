@@ -22,7 +22,7 @@ pipeline {
                                 includeProperties: false,
                                 jdk: '',
                                 reportBuildPolicy: 'ALWAYS',
-                                results: [[path: 'target/allure-results']]
+                                results: [[path: 'target/surefire-reports']]
                         ])
                     }
                 }
