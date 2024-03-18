@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'results', defaultValue: 'path/to/results')
+    }
     tools {
         maven 'Maven jenkins'
     }
@@ -24,13 +27,16 @@ pipeline {
         stage('reports') {
             steps {
                 script {
-                    allure([
-                            includeProperties: false,
-                            jdk: '',
-                            properties: [],
-                            reportBuildPolicy: 'ALWAYS',
-                            results: [[path: 'привет']]
-                    ])
+                    script {
+                        echo "Путь к отчету Allure: ${params.results}"
+//                    allure([
+//                            includeProperties: false,
+//                            jdk: '',
+//                            properties: [],
+//                            reportBuildPolicy: 'ALWAYS',
+//                            results: [[path: 'привет']]
+//                    ])
+                    }
                 }
             }
         }
