@@ -21,6 +21,7 @@ pipeline {
                         allure([
                                 includeProperties: false,
                                 jdk: '',
+                                reportBuildPolicy: 'ALWAYS',
                                 results: [[path: 'target/surefire-reports']]
                         ])
                     }
