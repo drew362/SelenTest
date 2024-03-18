@@ -29,6 +29,7 @@ pipeline {
                             jdk: '',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
+                            results: [[]]
                     ])
                 }
             }
