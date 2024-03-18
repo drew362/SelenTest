@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'results', defaultValue: 'path/to/results')
+        string(name: 'results', defaultValue: '[[path: \'target/surefire-reports\']]')
     }
     tools {
         maven 'Maven jenkins'
@@ -29,13 +29,13 @@ pipeline {
                 script {
                     script {
                         echo "Путь к отчету Allure: ${params.results}"
-//                    allure([
-//                            includeProperties: false,
-//                            jdk: '',
-//                            properties: [],
-//                            reportBuildPolicy: 'ALWAYS',
-//                            results: [[path: 'привет']]
-//                    ])
+                    allure([
+                            includeProperties: false,
+                            jdk: '',
+                            properties: [],
+                            reportBuildPolicy: 'ALWAYS',
+                            results: ${params.results}
+                    ])
                     }
                 }
             }
