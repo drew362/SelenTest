@@ -29,7 +29,7 @@ pipeline {
                             jdk: '',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
-                            results: [[]]
+                            results: [[path: 'привет']]
                     ])
                 }
             }
