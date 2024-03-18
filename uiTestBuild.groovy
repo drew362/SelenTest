@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'results', defaultValue: '[[path: \'target/surefire-reports\']]')
+        string(name: 'results', defaultValue: ':\'target/surefire-reports\'')
     }
     tools {
         maven 'Maven jenkins'
@@ -34,7 +34,7 @@ pipeline {
                             jdk: '',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
-                            results: ${params.results}
+                            results: [[path: '${params.results}']]
                     ])
                     }
                 }
