@@ -21,20 +21,16 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Генерация отчета Allure') {
+        stage('reports') {
             steps {
                 script {
-                    sh 'mvn allure:report'
-                }
-                post {
-                    always {
-                        allure([
-                                includeProperties: true,
-                                jdk              : '',
-                                properties       : [],
-                                reportBuildPolicy: 'ALWAYS',
-                                results          : [[path: 'привет']]
-                        ])                    }
+                    allure([
+                            includeProperties: false,
+                            jdk: '',
+                            properties: [],
+                            reportBuildPolicy: 'ALWAYS',
+                            results: [[path: 'target/allure-results']]
+                    ])
                 }
             }
         }
