@@ -26,6 +26,23 @@ node {
                 generateAllure()
             }
         }
+
+//        try {
+//            stage("Run tests") {
+//                parallel(
+//                        'Api Tests': {
+//                            runTestWithTag("apiTests")
+//                        },
+//                        'Ui Tests': {
+//                            runTestWithTag("uiTests")
+//                        }
+//                )
+//            }
+//        } finally {
+//            stage("Allure") {
+//                generateAllure()
+//            }
+//        }
     }
 }
 
