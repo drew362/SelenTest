@@ -19,7 +19,9 @@ pipeline {
                 script {
                     script {
                         allure([
-                                includeProperties: false, jdk: '', results: [[path: 'target/surefire-reports']]
+                                includeProperties: false,
+                                jdk: '',
+                                results: [[path: 'target/surefire-reports']]
                         ])
                     }
                 }
