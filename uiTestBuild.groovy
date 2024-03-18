@@ -33,7 +33,7 @@ pipeline {
                                 jdk              : '',
                                 properties       : [],
                                 reportBuildPolicy: 'ALWAYS',
-                                results          : [[path: 'target/surefire-reports']]
+                                results          : [[path: 'привет']]
                         ])                    }
                 }
             }
