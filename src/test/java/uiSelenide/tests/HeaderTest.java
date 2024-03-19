@@ -18,6 +18,7 @@ import static com.codeborne.selenide.Selenide.$;
 @Feature("Хэдэр")
 public class HeaderTest extends BaseTest {
 
+    @Feature("Проверка Хэдэра")
     @Test
     @DisplayName("Проверка элемнтов Header")
     public void checkElementsHeaderPage() {
@@ -30,6 +31,7 @@ public class HeaderTest extends BaseTest {
                 .shouldBe(Condition.visible);
     }
 
+    @Feature("Проверка Хэдэра")
     @Test
     @DisplayName("Поверка ссылок Header")
     public void clickHeaderElements() {

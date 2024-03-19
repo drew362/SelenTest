@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Condition.text;
 public class SearchPageTest extends BaseTest {
 
     SearchPage searchPage = new SearchPage();
+
     @Feature("Поиск")
     @Test
     @DisplayName("Отображение элементов страницы")
@@ -25,6 +26,7 @@ public class SearchPageTest extends BaseTest {
         searchPage.searchButton.shouldBe(Condition.visible);
     }
 
+    @Feature("Поиск")
     @Test
     @DisplayName("Проверка поиска по номеру креста")
     @Story("This is a Fail Story.")
