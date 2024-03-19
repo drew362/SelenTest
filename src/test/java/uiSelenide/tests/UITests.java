@@ -1,4 +1,4 @@
-package uiSelenide;
+package uiSelenide.tests;
 
 public interface UITests {
 }

@@ -10,9 +10,7 @@ import org.junit.experimental.categories.Category;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import rest.APITests;
 import uiSelenide.BaseTest;
-import uiSelenide.UITests;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
