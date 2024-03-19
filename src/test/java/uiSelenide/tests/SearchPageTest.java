@@ -32,7 +32,7 @@ public class SearchPageTest extends BaseTest {
     @Description("This is a Fail Story Description.")
     public void checkRezultInFieldText() {
         Selenide.open("http://localhost:8086/search");
-        searchPage.textField.setValue("200151");
+        searchPage.textField.setValue("2001");
         searchPage.searchButton.click();
         searchPage.resultSearch.shouldHave(text("КЛОПКОВ Петр"));
         Selenide.sleep(2000);
