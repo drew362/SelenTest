@@ -7,7 +7,6 @@ import static io.restassured.RestAssured.given;
 
 public class RestTest {
 
-    @Category(APITests.class)
     @Test
     public void searchTest() {
         given().
