@@ -1,13 +1,15 @@
-package ui.tests;
+package uiSelenide.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ui.BaseTest;
-import ui.pages.SearchPage;
+import uiSelenide.BaseTest;
+import uiSelenide.pages.SearchPage;
 
 import static com.codeborne.selenide.Condition.text;
 
@@ -26,9 +28,11 @@ public class SearchPageTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка поиска по номеру креста")
+    @Story("This is a Fail Story.")
+    @Description("This is a Fail Story Description.")
     public void checkRezultInFieldText() {
         Selenide.open("http://localhost:8086/search");
-        searchPage.textField.setValue("200151");
+        searchPage.textField.setValue("2001");
         searchPage.searchButton.click();
         searchPage.resultSearch.shouldHave(text("КЛОПКОВ Петр"));
         Selenide.sleep(2000);
