@@ -13,11 +13,10 @@ import uiSelenide.pages.SearchPage;
 
 import static com.codeborne.selenide.Condition.text;
 
-@Feature("Поиск")
 public class SearchPageTest extends BaseTest {
 
     SearchPage searchPage = new SearchPage();
-
+    @Feature("Поиск")
     @Test
     @DisplayName("Отображение элементов страницы")
     public void allThingsOnPageIsVisible() {
