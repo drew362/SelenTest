@@ -2,8 +2,10 @@ package uiSelenide.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import uiSelenide.BaseTest;
@@ -26,6 +28,8 @@ public class SearchPageTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка поиска по номеру креста")
+    @Story("This is a Fail Story.")
+    @Description("This is a Fail Story Description.")
     public void checkRezultInFieldText() {
         Selenide.open("http://localhost:8086/search");
         searchPage.textField.setValue("200151");
