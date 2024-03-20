@@ -6,7 +6,6 @@ import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Feature;
 import org.junit.Assert;
 
-import org.junit.experimental.categories.Category;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -15,7 +14,6 @@ import uiSelenide.BaseTest;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
-@Feature("Хэдэр")
 public class HeaderTest extends BaseTest {
 
     @Feature("Проверка Хэдэра")

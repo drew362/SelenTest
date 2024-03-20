@@ -9,7 +9,7 @@ pipeline {
                 git 'https://github.com/drew362/SelenTest.git'
             }
         }
-        stage('Run UI Tests') {
+        stage('Run Tests') {
             steps {
                 sh 'mvn test'
             }
