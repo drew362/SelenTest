@@ -28,5 +28,11 @@ pipeline {
                 }
             }
         }
+
+    }
+    post {
+        always {
+            archiveArtifacts 'allure-report'
+        }
     }
 }
