@@ -1,14 +1,11 @@
 package rest;
 
-import io.qameta.allure.Feature;
 import org.junit.Test;
-import org.junit.experimental.categories.Category;
 
 import static io.restassured.RestAssured.given;
 
 public class RestTest {
 
-    @Feature("Апи")
     @Test
     public void searchTest() {
         given().
