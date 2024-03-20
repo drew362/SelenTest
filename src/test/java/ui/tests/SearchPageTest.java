@@ -1,15 +1,11 @@
-package uiSelenide.tests;
+package ui.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
-import io.qameta.allure.Description;
-import io.qameta.allure.Feature;
-
-import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import uiSelenide.BaseTest;
-import uiSelenide.pages.SearchPage;
+import ui.BaseTest;
+import ui.pages.SearchPage;
 
 import static com.codeborne.selenide.Condition.text;
 
