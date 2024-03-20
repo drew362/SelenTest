@@ -3,7 +3,7 @@ package ui.tests;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import org.junit.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -28,7 +28,9 @@ public class HeaderTest extends BaseTest {
                 .shouldBe(Condition.visible);
     }
 
-    @Feature(value = "Проверка Header")
+    @Epics(value = {@Epic(value = "Математика"), @Epic(value = "Геометрия")})
+    @Features(value = {@Feature(value = "Тригонометрия"), @Feature(value = "Простые математические операции")})
+    @Stories(value = {@Story(value = "Синус"), @Story(value = "Синусоида")})
     @Test
     @DisplayName("Поверка ссылок Header")
     public void clickHeaderElements() {

@@ -30,9 +30,9 @@ pipeline {
         }
 
     }
-    post {
-        always {
-            archiveArtifacts 'allure-report'
-        }
-    }
+//    post {
+//        always {
+//            archiveArtifacts 'allure-report'
+//        }
+//    }
 }
