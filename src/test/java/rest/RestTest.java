@@ -7,7 +7,7 @@ import static io.restassured.RestAssured.given;
 
 public class RestTest {
 
-    @Feature("Api")
+    @Feature("Login")
     @Test
     public void searchTest() {
         given().
