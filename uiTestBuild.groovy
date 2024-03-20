@@ -14,7 +14,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('reports') {
+        stage('reports Allure') {
             steps {
                 script {
                     script {
