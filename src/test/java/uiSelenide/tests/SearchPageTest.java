@@ -17,7 +17,6 @@ public class SearchPageTest extends BaseTest {
 
     SearchPage searchPage = new SearchPage();
 
-    @Feature("Поиск")
     @Test
     @DisplayName("Отображение элементов страницы")
     public void allThingsOnPageIsVisible() {
@@ -26,7 +25,6 @@ public class SearchPageTest extends BaseTest {
         searchPage.searchButton.shouldBe(Condition.visible);
     }
 
-    @Feature("Поиск")
     @Test
     @DisplayName("Проверка поиска по номеру креста")
     @Story("This is a Fail Story.")
