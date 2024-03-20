@@ -3,6 +3,7 @@ package ui.tests;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.Feature;
 import org.junit.Assert;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,6 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class HeaderTest extends BaseTest {
 
+    @Feature("Проверка Header")
     @Test
     @DisplayName("Проверка элемнтов Header")
     public void checkElementsHeaderPage() {
@@ -26,6 +28,7 @@ public class HeaderTest extends BaseTest {
                 .shouldBe(Condition.visible);
     }
 
+    @Feature("Проверка Header")
     @Test
     @DisplayName("Поверка ссылок Header")
     public void clickHeaderElements() {

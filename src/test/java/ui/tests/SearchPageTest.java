@@ -2,6 +2,7 @@ package ui.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ui.BaseTest;
@@ -13,6 +14,7 @@ public class SearchPageTest extends BaseTest {
 
     SearchPage searchPage = new SearchPage();
 
+    @Feature("Поиск")
     @Test
     @DisplayName("Отображение элементов страницы")
     public void allThingsOnPageIsVisible() {
@@ -21,6 +23,7 @@ public class SearchPageTest extends BaseTest {
         searchPage.searchButton.shouldBe(Condition.visible);
     }
 
+    @Feature("Поиск")
     @Test
     @DisplayName("Проверка поиска по номеру креста")
     public void checkRezultInFieldText() {
