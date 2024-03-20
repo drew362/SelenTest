@@ -17,6 +17,7 @@ public class HeaderTest extends BaseTest {
 
     @Feature(value = "Проверка Header")
     @Test
+    @Flaky
     @DisplayName("Проверка элемнтов Header")
     public void checkElementsHeaderPage() {
         Selenide.open("http://localhost:8086/search");
