@@ -27,8 +27,6 @@ public class SearchPageTest extends BaseTest {
 
     @Test
     @DisplayName("Проверка поиска по номеру креста")
-    @Story("This is a Fail Story.")
-    @Description("This is a Fail Story Description.")
     public void checkRezultInFieldText() {
         Selenide.open("http://localhost:8086/search");
         searchPage.textField.setValue("200151");

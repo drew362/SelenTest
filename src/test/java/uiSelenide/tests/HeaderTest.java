@@ -3,7 +3,6 @@ package uiSelenide.tests;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
-import io.qameta.allure.Feature;
 import org.junit.Assert;
 
 import org.junit.jupiter.api.DisplayName;
